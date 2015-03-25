@@ -1,0 +1,42 @@
+{
+  "name": "metalsmith-feed-js",
+  "version": "0.1.0",
+  "description": "A metalsmith native javascript plugin to generate an RSS feed for a collection or tag",
+  "author": {
+    "name": "Adam Hull",
+    "email": "adam@hmlad.com"
+  },
+  "keywords": [
+    "metalsmith",
+    "atom",
+    "rss",
+    "feed",
+    "plugin"
+  ],
+  "main": "metalsmith-feed.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ekristen/metalsmith-feed-js.git"
+  },
+  "homepage": "https://github.com/ekristen/metalsmith-feed-js",
+  "bugs": {
+    "url": "https://github.com/ekristen/metalsmith-feed-js/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "extend": "~2.0.0",
+    "metalsmith-collections": "~0.6.0",
+    "metalsmith-tags": "^0.8.2",
+    "rss": "~1.0.0"
+  },
+  "devDependencies": {
+    "tape": "*",
+    "xml2js": "*",
+    "metalsmith": "~1.0.1",
+    "metalsmith-collections": "~0.6.0",
+    "metalsmith-tags": "*"
+  },
+  "scripts": {
+    "test": "node tape"
+  }
+}
