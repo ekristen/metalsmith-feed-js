@@ -1,9 +1,11 @@
 metalsmith-feed-js
 ==================
 
+To each there own and thank you for `hurrymaplelad` for the original metalsmith-feed.
+
 Why the fork? CoffeeScript Sucks (tm)
 
-This is essentially a fork of URL with a few minor improvements to support tags as well as collections.
+This is essentially a fork of https://github.com/hurrymaplelad/metalsmith-feed with a few minor improvements to support tags as well as collections.
 
 ---
 

@@ -2,10 +2,6 @@
   "name": "metalsmith-feed-js",
   "version": "0.1.0",
   "description": "A metalsmith native javascript plugin to generate an RSS feed for a collection or tag",
-  "author": {
-    "name": "Adam Hull",
-    "email": "adam@hmlad.com"
-  },
   "keywords": [
     "metalsmith",
     "atom",
