@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-feed-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A metalsmith native javascript plugin to generate an RSS feed for a collection or tag",
   "keywords": [
     "metalsmith",

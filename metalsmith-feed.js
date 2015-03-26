@@ -12,6 +12,7 @@ module.exports = function(options) {
   collectionName = options.collection
   tagName = options.tag
   tagHandle = options.handle || 'tags'
+  metadataKey = options.metadataKey || 'feeds'
 
   if (!collectionName && !tagName) {
     throw new Error('collection or tag option is required');
@@ -21,6 +22,7 @@ module.exports = function(options) {
     var collection, tag, feed, feedOptions, file, itemData, metadata, siteUrl, _i, _len, _ref
 
     metadata = metalsmith.metadata()
+    metadata[metadataKey] = metadata[metadataKey] || []
     if (!metadata.collections && !metadata.tags) {
       return done(new Error('no collections or tags configured - see metalsmith-collections or metalsmith-tags'))
     }
@@ -66,6 +68,8 @@ module.exports = function(options) {
     files[destination] = {
       contents: new Buffer(feed.xml(), 'utf8')
     }
+
+    metadata[metadataKey].push(destination)
 
     return done()
   }
