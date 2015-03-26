@@ -11,6 +11,7 @@ module.exports = function(options) {
   destination = options.destination || 'rss.xml'
   collectionName = options.collection
   tagName = options.tag
+  tagHandle = options.handle || 'tags'
 
   if (!collectionName && !tagName) {
     throw new Error('collection or tag option is required');
@@ -29,7 +30,7 @@ module.exports = function(options) {
     }
 
     if (tagName) {
-      collection = metadata.tags[tagName]
+      collection = metadata[tagHandle][tagName]
     }
 
     feedOptions = extend({}, metadata.site, options, {
