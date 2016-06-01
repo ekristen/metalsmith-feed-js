@@ -25,13 +25,13 @@ test('it renders rss feed', function (t) {
     }))
     .build(function(err, files) {
       t.ok(!err, 'should be no error building')
-      
+
       parseString(files['rss.xml'].contents, function(err, result) {
         t.ok(!err, 'should be no error on parsing rss')
         t.ok(result, 'there should be some rss content')
 
         t.equal(result['rss']['$']['xmlns:atom'], 'http://www.w3.org/2005/Atom')
-        
+
         channel = result['rss']['channel'][0]
         t.equal(channel.title[0], metadata.site.title)
         t.equal(channel.author[0], metadata.site.author)
@@ -40,7 +40,7 @@ test('it renders rss feed', function (t) {
         post = channel.item[0]
         t.equal(post.title[0], 'Theory of Juice')
         t.equal(post.description[0], '<p>juice appeal</p>\n')
-        
+
         t.end()
       })
     })
@@ -73,5 +73,3 @@ test('it complains with not site.url', function(t) {
       t.end()
     })
 })
-
-
